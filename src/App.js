@@ -1,7 +1,9 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blog from './componenets/Blog/Blog';
+import Error from './componenets/Error/Error';
 import Home from './componenets/Home/Home';
+import Quizzes from './componenets/Quizzes/Quizzes';
 import Statistics from './componenets/Statistics/Statistics';
 import Topic from './componenets/Topic/Topic';
 import Root from './Layout/Root';
@@ -23,6 +25,11 @@ function App() {
           element: <Topic></Topic>
         },
         {
+          path: '/topic/:topicId',
+          loader: ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.topicId}`),
+          element: <Quizzes></Quizzes>
+        },
+        {
           path: '/statistics',
           element: <Statistics></Statistics>
         },
@@ -34,7 +41,7 @@ function App() {
     },
     {
       path: '*',
-      element: <div>This route not found. 404</div>
+      element: <Error></Error>
     }
 
   ])
