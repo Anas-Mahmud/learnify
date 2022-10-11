@@ -19,6 +19,7 @@ function App() {
         },
         {
           path: '/topic',
+          loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <Topic></Topic>
         },
         {
@@ -31,6 +32,10 @@ function App() {
         }
       ]
     },
+    {
+      path: '*',
+      element: <div>This route not found. 404</div>
+    }
 
   ])
 
