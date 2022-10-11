@@ -1,22 +1,37 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
-import Navbar from './componenets/Navber/Navbar';
+import Blog from './componenets/Blog/Blog';
+import Home from './componenets/Home/Home';
+import Statistics from './componenets/Statistics/Statistics';
+import Topic from './componenets/Topic/Topic';
+import Root from './Layout/Root';
 
 function App() {
 
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Navbar></Navbar>
+      element: <Root></Root>,
+      children: [
+        {
+          path: '/home',
+          element: <Home></Home>
+        },
+        {
+          path: '/topic',
+          element: <Topic></Topic>
+        },
+        {
+          path: '/statistics',
+          element: <Statistics></Statistics>
+        },
+        {
+          path: '/blog',
+          element: <Blog></Blog>
+        }
+      ]
     },
-    {
-      path: '/home',
-      element: <div>Home page</div>
-    },
-    {
-      path: '/about',
-      element: <div>about page</div>
-    }
+
   ])
 
   return (
