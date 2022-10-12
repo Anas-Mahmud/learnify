@@ -10,11 +10,11 @@ const Statistics = () => {
         <div>
             <h2>statistics page</h2>
             {
-                chartsData.map(chartData => console.log(chartData.total)
-                    // <LineChart width={300} height={100} data={chartData}>
-                    //     <Line type="monotone" dataKey={chartData.total} stroke="#8884d8" strokeWidth={2} />
-                    //     <Tooltip />
-                    // </LineChart>
+                chartsData.map(chartData =>
+                    <LineChart width={300} height={100} data={chartData}>
+                        <Line type="monotone" dataKey={chartData.total} stroke="#8884d8" strokeWidth={2} />
+                        <Tooltip />
+                    </LineChart>
                 )
             }
         </div>
