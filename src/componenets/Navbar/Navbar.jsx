@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -9,16 +9,16 @@ const Navbar = () => {
                     <h1 className='flex items-center p-2 text-3xl font-bold'>Learnify</h1>
                     <ul className="items-stretch hidden space-x-3 md:flex">
                         <li className="flex">
-                            <Link className='flex items-center px-4 -mb-1 border-b-2 border-transparent' to='/home'>Home</Link>
+                            <NavLink className='flex items-center px-4 -mb-1 border-b-2 border-transparent' to='/home'>Home</NavLink>
                         </li>
                         <li className="flex">
-                            <Link className='flex items-center px-4 -mb-1 border-b-2 border-transparent' to='/topic'>Topic</Link>
+                            <NavLink className='flex items-center px-4 -mb-1 border-b-2 border-transparent' to='/topic'>Topic</NavLink>
                         </li>
                         <li className="flex">
-                            <Link className='flex items-center px-4 -mb-1 border-b-2 border-transparent' to='/statistics'>Statistics</Link>
+                            <NavLink className='flex items-center px-4 -mb-1 border-b-2 border-transparent' to='/statistics'>Statistics</NavLink>
                         </li>
                         <li className="flex">
-                            <Link className='flex items-center px-4 -mb-1 border-b-2 border-transparent' to='/blog'>Blog</Link>
+                            <NavLink className='flex items-center px-4 -mb-1 border-b-2 border-transparent' to='/blog'>Blog</NavLink>
                         </li>
                     </ul>
                 </div>

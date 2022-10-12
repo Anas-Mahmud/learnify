@@ -1,22 +1,30 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { LineChart, Line, Tooltip, } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const Statistics = () => {
-    const data = useLoaderData();
-    const chartsData = data.data;
-    // console.log(chartsData);
+    const data = useLoaderData().data;
     return (
-        <div>
-            <h2>statistics page</h2>
-            {
-                chartsData.map(chartData =>
-                    <LineChart width={300} height={100} data={chartData}>
-                        <Line type="monotone" dataKey={chartData.total} stroke="#8884d8" strokeWidth={2} />
-                        <Tooltip />
-                    </LineChart>
-                )
-            }
+        <div style={{ width: "100%", height: 500 }}>
+            <ResponsiveContainer>
+                <AreaChart
+                    width={500}
+                    height={400}
+                    data={data}
+                    margin={{
+                        top: 10,
+                        right: 30,
+                        left: 0,
+                        bottom: 0,
+                    }}
+                >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
+                    <Area type="monotone" dataKey="total" stroke="#8884d8" fill="#8884d8" />
+                </AreaChart>
+            </ResponsiveContainer>
         </div>
     );
 };
