@@ -10,7 +10,7 @@ const TopicCard = ({ topic }) => {
                 <div className="p-6 space-y-8">
                     <div className="space-y-2">
                         <h2 className="text-3xl font-semibold tracking-wide">{name}</h2>
-                        <p>Total: {total}</p>
+                        <p>Total question: {total}</p>
                     </div>
                     <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-400 dark:text-gray-900"><Link to={`/topic/${id}`}>Quiz</Link></button>
                 </div>
