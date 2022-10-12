@@ -12,7 +12,7 @@ const TopicCard = ({ topic }) => {
                         <h2 className="text-3xl font-semibold tracking-wide">{name}</h2>
                         <p>Total: {total}</p>
                     </div>
-                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-400 dark:text-gray-900"><Link to={`/topic/${id}`}>Read more</Link></button>
+                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-400 dark:text-gray-900"><Link to={`/topic/${id}`}>Quiz</Link></button>
                 </div>
             </div>
         </div>

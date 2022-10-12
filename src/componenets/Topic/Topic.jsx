@@ -5,6 +5,7 @@ import TopicCard from '../TopicCard/TopicCard';
 const Topic = () => {
     const data = useLoaderData();
     const topics = data.data;
+    // console.log(topics);
     return (
         <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-10 m-20'>
             {
